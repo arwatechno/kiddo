@@ -1,0 +1,518 @@
+
+
+body.theme1 {
+  display: grid;
+  justify-content: center;
+}
+
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+/*header*/
+body.theme1 .header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(60deg, rgb(31, 0, 49) 0%, rgb(120, 0, 218) 100%);
+  color: rgb(229, 255, 0);
+}
+
+/*same as defualt*/
+#logo{
+    border-radius: 50%;
+    width: 150px;
+    height:150px;
+}
+body.theme1 h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+  color:yellow;
+  
+}
+body.theme1 #slogan {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 1px;
+  font-size:30px;
+  color: #eeff00a4;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.flex { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/*some styling and animation*/
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /* Fix for safari gap */
+  min-height: 100px;
+  max-height: 150px;
+}
+
+body.theme1 .content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Some styling and animation */
+body.theme1 .parallax > use {
+  fill: #c300ffb7; /* Updated color */
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*login */
+body.theme1 #aa {
+    height:750px;
+    width:1680px;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #c300ffb7;
+    font-size: 1.3em;
+  }
+  body.theme1 #theme-select{
+    margin:5px;
+    width: 300px;
+    padding:20px;
+    height:20px;
+    font-size:24px;
+    font-family: Arial, Helvetica, sans-serif;
+    border:none;
+    border-radius:4px;
+    background-color: #57005a;
+    color:white;
+   
+  }
+
+body.theme1
+#thetheme,
+#thename,
+#theage{
+  color: #f4ff57;
+  z-index:2;
+  font-size:20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+#login {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+body.theme1 #name,
+body.theme1 #age {
+  margin:5px;
+  width: 100%;
+  border-radius: 40px;
+  padding:20px;
+  height:20px;
+  font-size:24px;
+  font-family: Arial, Helvetica, sans-serif;
+  border:2px solid rgb(229, 255, 0);
+  border-radius:12px;
+  box-shadow:2px 5px rgb(229, 255, 0);
+  
+}
+body.theme1 #sub {
+    display: inline-block;
+    padding:20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(229, 255, 0);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(130, 143, 13);
+    
+  }
+  
+  body.theme1 #sub:hover {
+    background-color: #ffffff;
+color:rgb(229, 255, 0);
+border:1px solid rgb(229, 255, 0);
+}
+body.theme1 #sub:active {
+    background-color: rgb(130, 143, 13);
+    box-shadow: 0 5px rgb(86, 95, 5);
+    transform: translateY(4px);
+  }
+
+/*some styling and animation*/
+body.theme1 .wrapper {
+    position: relative;
+    width: 550px;
+    height: 550px;
+    display: grid;
+    place-items: center;
+  }
+  
+  body.theme1 .wrapper i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgb(0, 0, 0);
+    transition: 0.5s;
+    z-index: 1;
+  }
+  
+  .wrapper i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: anim 6s linear infinite;
+  }
+  
+  .wrapper i:nth-child(2),
+  .wrapper i:nth-child(3) {
+    border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  }
+  
+  .wrapper i:nth-child(2) {
+    animation: anim 4s linear infinite;
+  }
+  
+  .wrapper i:nth-child(3) {
+    animation: anim2 10s linear infinite;
+  }
+  
+  @keyframes anim {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes anim2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+
+/*kidcalc section*/
+body.theme1 #kidcalc{
+    background: linear-gradient(60deg, rgb(31, 0, 49) 0%, rgb(120, 0, 218) 100%);
+}
+#calc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.ops,
+.nums,
+.others,
+.input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 25px;
+    margin:10px ;
+}
+
+body.theme1 #input-box1{
+  border-radius: 40px;
+  padding:20px;
+  font-size:24px;
+  font-family: Arial, Helvetica, sans-serif;
+  border:2px solid yellow;
+  border-radius:12px;
+  box-shadow:2px 2px #f4ff57;
+  height: 50px;
+  width: 400px;
+  margin-top: 10px;
+}
+body.theme1 #input-box2{
+    border-radius: 40px;
+  padding:20px;
+  font-size:24px;
+  font-family: Arial, Helvetica, sans-serif;
+  border:2px solid yellow;
+  border-radius:12px;
+  box-shadow:2px 2px #f4ff57;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+}
+body.theme1 .check{
+    padding: 15px 25px;
+    font-size: 24px;
+    background-color: yellow;
+    border: none;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    color: #000000;
+
+}
+/* Styles for numbers */
+body.theme1 .num {
+    padding: 15px 25px;
+    font-size: 24px;
+    background-color: #3c0752;
+    border: none;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+}
+
+/* Styles for operators */
+body.theme1 .op {
+    padding: 15px 25px;
+    font-size: 24px;
+    background-color: #662c80;
+    border: none;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+}
+
+/* Styles for other buttons */
+body.theme1 .other {
+    padding: 15px 25px;
+    font-size: 24px;
+    background-color: rgb(166, 84, 221);
+    border: none;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    color:#ffffff;
+}
+
+/* Hover effect */
+body.theme1 .num:hover,
+body.theme1 .op:hover,
+body.theme1 .other:hover {
+    background-color: #9c1acf;
+    color:#000000
+}
+
+/* Active effect */
+body.theme1 .num:active,
+body.theme1 .op:active,
+body.theme1 .other:active {
+    background-color: #e8ff83;
+    color:#000000;
+}
+
+/*info section*/
+body.theme1 #info {
+    height: 370px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: url(https://clipart-library.com/images/kc8oGGg9i.gif), url(https://media.istockphoto.com/id/1165117802/vector/seamless-geometric-pattern-hand-drawn.jpg?s=612x612&w=0&k=20&c=kZ3Cq7dPXXMnTHUlk5LfY_DCvGI2yszOQ0nAnftbXX0=);
+    background-position: center bottom, left top;
+    background-repeat: no-repeat, repeat;
+    background-size: 400px, auto;
+    color:#ffffff;
+
+}
+
+@media (max-width: 390px){
+    
+
+  /*logo */
+  body.theme1 #logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  /*h1 */
+  body.theme1 h1 {
+    font-size: 28px;
+  }
+
+  /*slogan */
+  body.theme1 #slogan {
+    font-size: 20px;
+  }
+
+  /*logo */
+  body.theme1 .logo {
+    width: 30px;
+    padding-right: 10px;
+  }
+
+  body.theme1 .inner-header {
+    height: auto;
+    padding: 20px;
+  }
+
+  body.theme1 .flex {
+    flex-direction: column;
+  }
+
+  /*waves */
+  body.theme1 .waves {
+    height: auto;
+  }
+
+  body.theme1 .content {
+    height: auto;
+  }
+
+
+  /*login */
+  body.theme1 #aa {
+      width:350px;     
+      height: 500px; 
+      padding: 40px;
+  }
+  body.theme1 #theme-select{
+    margin:5px;
+    width: 150px;
+    padding:20px;
+    height:20px;
+    font-size:14px;      
+    border-radius:4px;
+  }
+  
+  body.theme1 #login {
+    width: 250px;
+    height: 250px;
+    gap: 10px;
+  }
+  body.theme1 #name,
+  body.theme1 #age {
+    margin:5px;
+    width: 130px;
+    padding:10px;
+    height:15px;
+    font-size:14px;
+    border-radius:12px;
+    
+  }
+  body.theme1 #sub {
+      padding:10px;
+      font-size: 20px;    
+    }
+  /*some styling and animation*/
+  body.theme1 .wrapper {
+      width: 350px;
+      height: 350px;
+    }
+  /*kidcalc section*/
+  body.theme1 #input-box1{
+    border-radius: 40px;
+    padding:20px;
+    font-size:24px;
+    border-radius:12px;
+    width: 200px;
+  }
+  body.theme1 #input-box2{
+      border-radius: 40px;
+    padding:20px;
+    font-size:24px;
+    border-radius:12px;
+  }
+  body.theme1 .check{
+    padding: 10px 10px;
+    font-size: 20px;
+    margin: 4px;  
+      
+      
+  }
+  /* Styles for numbers */
+  body.theme1 .num {
+      padding: 10px 10px;
+      font-size: 20px;
+      margin: 4px;      
+  }
+  /* Styles for operators */
+  body.theme1 .op {
+      padding: 10px 20px;
+      font-size: 24px;
+  }
+  
+  /* Styles for other buttons */
+  body.theme1 .other {
+      padding: 10px 20px;
+  }
+  /*info section*/
+  body.theme1 #info {
+      height: 300px;
+      font-size: 20px;
+      background-size: 200px, 500px;
+  
+  }
+}
+

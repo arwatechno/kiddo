@@ -1,0 +1,516 @@
+@import url(theme1.css);
+@import url(theme2.css);
+@import url(theme3.css);
+ body{
+    display: grid;
+    justify-content: center;
+  }
+  
+  @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+  
+  /*header*/
+   .header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(60deg, rgb(56, 56, 56) 0%, rgb(187, 187, 187) 100%);
+    color: rgb(0, 0, 0);
+  }
+  
+  /*same as defualt*/
+  #logo{
+      border-radius: 50%;
+      width: 150px;
+      height:150px;
+  }
+   h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:300;
+    letter-spacing: 2px;
+    font-size:48px;
+    color:rgb(255, 255, 255);
+    
+  }
+   #slogan {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
+    font-size:30px;
+    color: #000000a4;
+  }
+  .logo {
+    width:50px;
+    fill:white;
+    padding-right:15px;
+    display:inline-block;
+    vertical-align: middle;
+  }
+  .inner-header {
+    height:65vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .flex { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /*some styling and animation*/
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /* Fix for safari gap */
+    min-height: 100px;
+    max-height: 150px;
+  }
+  
+   .content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+  }
+  
+  /* Some styling and animation */
+   .parallax > use {
+    fill: #ffffff; /* Updated color */
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+  
+  /*login */
+   #aa {
+      height:750px;
+      width:1680px;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: rgb(255, 255, 255);
+      font-size: 1.3em;
+    }
+     #theme-select{
+      margin:5px;
+      width: 300px;
+      padding:20px;
+      height:20px;
+      font-size:24px;
+      font-family: Arial, Helvetica, sans-serif;
+      border:none;
+      border-radius:4px;
+      background-color: #969696;
+      color:rgb(0, 0, 0);
+     
+    }
+  
+  
+  #thetheme,
+  #thename,
+  #theage{
+    color: #000000;
+    z-index:2;
+    font-size:20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+  }
+  
+  #login {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+  }
+   #name,
+   #age {
+    margin:5px;
+    width: 100%;
+    border-radius: 40px;
+    padding:20px;
+    height:20px;
+    font-size:24px;
+    font-family: Arial, Helvetica, sans-serif;
+    border:2px solid rgb(0, 0, 0);
+    border-radius:12px;
+    box-shadow:2px 5px rgb(0, 0, 0);
+    
+  }
+   #sub {
+      display: inline-block;
+      padding:20px;
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px rgb(61, 61, 61);
+      
+    }
+    
+     #sub:hover {
+      background-color: #494949;
+  color:rgb(255, 255, 255);
+  border:1px solid rgb(0, 0, 0);
+  }
+   #sub:active {
+      background-color: rgb(0, 0, 0);
+      box-shadow: 0 5px rgb(255, 255, 255);
+      transform: translateY(4px);
+    }
+  
+  /*some styling and animation*/
+   .wrapper {
+      position: relative;
+      width: 550px;
+      height: 550px;
+      display: grid;
+      place-items: center;
+    }
+    
+     .wrapper i {
+      position: absolute;
+      inset: 0;
+      border: 2px solid rgb(0, 0, 0);
+      transition: 0.5s;
+      z-index: 1;
+    }
+    
+    .wrapper i:nth-child(1) {
+      border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+      animation: anim 6s linear infinite;
+    }
+    
+    .wrapper i:nth-child(2),
+    .wrapper i:nth-child(3) {
+      border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+    }
+    
+    .wrapper i:nth-child(2) {
+      animation: anim 4s linear infinite;
+    }
+    
+    .wrapper i:nth-child(3) {
+      animation: anim2 10s linear infinite;
+    }
+    
+    @keyframes anim {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes anim2 {
+      0% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    
+  
+  /*kidcalc section*/
+   #kidcalc{
+      background: linear-gradient(60deg,  rgb(187, 187, 187) 0%, rgb(56, 56, 56) 100%);
+  }
+  #calc{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      
+  }
+  
+  .ops,
+  .nums,
+  .others,
+  .input{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  button {
+      padding: 10px 20px;
+      font-size: 25px;
+      margin:10px ;
+  }
+  
+   #input-box1{
+    border-radius: 40px;
+    padding:20px;
+    font-size:24px;
+    font-family: Arial, Helvetica, sans-serif;
+    border:2px solid rgb(0, 0, 0);
+    border-radius:12px;
+    box-shadow:2px 2px #585858;
+    height: 50px;
+    width: 400px;
+    margin-top: 10px;
+  }
+   #input-box2{
+      border-radius: 40px;
+    padding:20px;
+    font-size:24px;
+    font-family: Arial, Helvetica, sans-serif;
+    border:2px solid rgb(0, 0, 0);
+    border-radius:12px;
+    box-shadow:2px 2px #585858;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+  }
+   .check{
+      padding: 15px 25px;
+      font-size: 24px;
+      background-color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 8px;
+      margin: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      color: #ffffff;
+  
+  }
+  /* Styles for numbers */
+   .num {
+      padding: 15px 25px;
+      font-size: 24px;
+      background-color: #505050;
+      border: none;
+      border-radius: 8px;
+      margin: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      color: #ffffff;
+  }
+  
+  /* Styles for operators */
+   .op {
+      padding: 15px 25px;
+      font-size: 24px;
+      background-color: #505050;
+      border: none;
+      border-radius: 8px;
+      margin: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      color: #ffffff;
+  }
+  
+  /* Styles for other buttons */
+   .other {
+      padding: 15px 25px;
+      font-size: 24px;
+      background-color: rgb(51, 51, 51);
+      border: none;
+      border-radius: 8px;
+      margin: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      color:#ffffff;
+  }
+  
+  /* Hover effect */
+   .num:hover,
+   .op:hover,
+   .other:hover {
+      background-color: #ffffff;
+      color:#000000
+  }
+  
+  /* Active effect */
+   .num:active,
+   .op:active,
+   .other:active {
+      background-color: #82837d;
+      color:#000000;
+  }
+  
+  /*info section*/
+   #info {
+      height: 370px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      background-image: url(https://condaluna.com/assets/stickers/congrats.gif), url(https://www.psdgraphics.com/file/crumpled-paper-texture.jpg);
+      background-position: center bottom, left top;
+      background-repeat: no-repeat, repeat;
+      background-size: 400px, auto;
+      color:#000000;
+  
+  }
+  @media (max-width: 390px){
+    
+  /*logo */
+  #logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  /*h1 */
+  h1 {
+    font-size: 28px;
+  }
+
+  /*slogan */
+  #slogan {
+    font-size: 20px;
+  }
+
+  /*logo */
+  .logo {
+    width: 30px;
+    padding-right: 10px;
+  }
+
+  .inner-header {
+    height: auto;
+    padding: 20px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  /*waves */
+  .waves {
+    height: auto;
+  }
+
+  .content {
+    height: auto;
+  }
+
+
+  /*login */
+  #aa {
+      width:350px;     
+      height: 500px; 
+      padding: 40px;
+  }
+  #theme-select{
+    margin:5px;
+    width: 150px;
+    padding:20px;
+    height:20px;
+    font-size:14px;      
+    border-radius:4px;
+  }
+  
+  #login {
+    width: 250px;
+    height: 250px;
+    gap: 10px;
+  }
+   #name,
+   #age {
+    margin:5px;
+    width: 130px;
+    padding:10px;
+    height:15px;
+    font-size:14px;
+    border-radius:12px;
+    
+  }
+   #sub {
+      padding:10px;
+      font-size: 20px;    
+    }
+  /*some styling and animation*/
+   .wrapper {
+      width: 350px;
+      height: 350px;
+    }
+  /*kidcalc section*/
+   #input-box1{
+    border-radius: 40px;
+    padding:20px;
+    font-size:24px;
+    border-radius:12px;
+    width: 200px;
+  }
+   #input-box2{
+      border-radius: 40px;
+    padding:20px;
+    font-size:24px;
+    border-radius:12px;
+  }
+   .check{
+    padding: 10px 10px;
+    font-size: 20px;
+    margin: 4px;  
+      
+      
+  }
+  /* Styles for numbers */
+   .num {
+      padding: 10px 10px;
+      font-size: 20px;
+      margin: 4px;      
+  }
+  /* Styles for operators */
+   .op {
+      padding: 10px 20px;
+      font-size: 24px;
+  }
+  
+  /* Styles for other buttons */
+   .other {
+      padding: 10px 20px;
+  }
+  /*info section*/
+   #info {
+      height: 300px;
+      font-size: 20px;
+      background-size: 200px, 500px;
+  
+  }
+}

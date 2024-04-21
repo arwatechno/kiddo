@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../kidcalc/assets/stylecalc.css">
+    <title>kidcalc</title>
+</head>
+<body>
+<div class="header">
+    <div class="inner-header flex">
+    <!--logo-->
+    <img 
+        id="logo"
+        alt="logo"
+        src="https://t3.ftcdn.net/jpg/05/51/43/56/360_F_551435602_v0rxhHEIgbQNWozIjcgJOR2Nmp1SINMV.jpg">
+        <h1>Calculator for kids</h1>
+        <span id="slogan">enjoy funny maths </span>
+    </div>
+    
+    <!--Waves-->
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+    
+    </div>  
+    <!--login form-->
+    <div id="aa">
+    <div class="wrapper">
+        <i id="1"></i>
+        <i id="2"></i>
+        <i id="3"></i>
+        <div id="login">
+            <!--name-->
+            <div>
+                <label id="thename">name</label>
+                <input id="name" type="text">
+            </div>
+            <!--age-->
+            <div>
+                <label id="theage">age</label>
+                <input id="age" type="text">
+            </div>       
+            <!-- select theme -->
+    <div>
+        <label id="thetheme">theme</label>
+        <div class="select">
+            <select id="theme-select">
+                <option value="defualt">Light Mode</option>
+                <option value="theme1">space</option>
+                <option value="theme2">dinosours</option>
+                <option value="theme3">flowers</option>
+            </select>
+        </div>
+    </div>
+            <!--submit-->
+            <button id="sub">submit</button>
+        </div>
+    </div>
+    </div>
+    <!--kidcalc section-->
+    <div id="kidcalc">
+<div id="calc">
+    <div class="input">
+        <!--text boxes here are read only bec. the user will use the buttons not the keyboard-->
+        <!--the user writes a mathematical expression here-->
+        <input type="text" id="input-box1" readonly>
+        <!--after inputiing the the expression and the answer the user clicks this to check that they are the same-->
+        <button class="check">=</button>
+        <!--the user writes his answer here-->
+        <input type="text" id="input-box2" readonly>
+        
+    </div>
+    <div class="nums">
+        <!-- Buttons for  numbers-->
+        <button class="num">1</button>
+        <button class="num">2</button>
+        <button class="num">3</button>
+        <button class="num">4</button>
+        <button class="num">5</button>
+        <button class="num">6</button>
+        <button class="num">7</button>
+        <button class="num">8</button>
+        <button class="num">9</button>
+        <button class="num">0</button>
+    </div>
+    <div class="ops">
+        <!-- Buttons for  operators-->
+        <button class="op">+</button>
+        <button class="op">-</button>
+        <button class="op">x</button>
+        <button class="op">÷</button>
+    </div>
+    <div class="others">
+        <!-- Button for deleting character from the input -->
+        <button class="other" >del</button>
+        <!-- Button for clearing the input -->
+        <button class="other">clear</button>
+    </div>
+</div>
+</div>
+
+<!--information bar-->
+<div id="info">
+    <!--if result of input-box1 equals the answer in input-box2-->
+    <div class="result">
+        <!--this appears if they are equal-->
+        <label id="result">Good Job .....Your answer is right / score:</label>
+    </div>
+</div>
+
+  <script>
+    const modeSelect = document.getElementById('theme-select');
+const body = document.body;
+
+modeSelect.addEventListener('change', function() {
+  const selectedMode = modeSelect.value;
+  body.className = selectedMode;
+});
+  </script>
+
+</body>
+</html>
